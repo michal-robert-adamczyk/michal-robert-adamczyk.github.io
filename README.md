@@ -8,7 +8,7 @@ I created this website to introduce myself and simply show my skills, knowledge 
 
 
 homepage is divided for four main section: 
-## Introduction, 
+## Introduction 
 ## my skills
 ## my projects
-##contact me
+## contact me
