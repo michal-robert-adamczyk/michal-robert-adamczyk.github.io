@@ -9,6 +9,9 @@
         font-weight: 600;
         padding: 1rem 0;
         border-bottom: 2px solid #E5E8EC;
+        @media (max-width: $mobile){
+            text-align: center;
+          }
     }
 }
 
@@ -16,11 +19,19 @@
     display: grid;
     padding: 8rem 0 0;
     grid-template-columns: 1fr 1fr;
+    column-gap: .5rem;
+    @media (max-width: $mobile){
+    grid-template-columns: 1fr;  
+    padding: 5rem 0 0;
+    }
     &__item {
         color: $gray;
         padding: 11px 0 11px 30px;
         position: relative;
-        &::before {
+        @media (max-width: $mobile) {
+            padding-left: 20px;
+        }
+      &::before {
             position: absolute;
             top: 10px;
             left: 0;
@@ -30,16 +41,22 @@
             height: 18px;
             background: url('../assets/img/ok-green.svg');
             .skills-list--violet & {
-                background: url('../assets/img/ok-violet.svg');
+                background-image: url('../assets/img/ok-violet.svg');
             }
             .skills-list--blue & {
-                background: url('../assets/img/ok-blue.svg');
+                background-image: url('../assets/img/ok-blue.svg');
+            }
+            @media (max-width: $mobile){
+                width: 12px;
+                height: 12px;
+                top: 11px;
+                background-size: contain;
             }
         }
     }    
     &__list {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) ;
         list-style-type: none;
         padding: 0;
         margin-top: calc(1.5rem + 4px);
